@@ -24,13 +24,16 @@ export default ({
 
   if (message.author.id === '214807903129960448' && Math.random() < 0.15) {
     const reactionIds = ['788714191669821470', '609008767446548480', '739206458721435720', '803160041221259264', '751029481677914122', '751029481677914122']
-    
-    if(Math.random() < 0.15){
+
+    if (Math.random() < 0.15) {
+        // noot noot
         const longpingu = ['738652585522888716', '738652585615032360', '738652585468231681', '738652585657106492', '738652585820553226']
-        longpingu.forEach(id => {
-            message.react(id)  
-        })
-    }else{
+        longpingu.forEach((id, i) => {
+            setTimeout(() => {
+                message.react(id)
+            }, i * 500)
+        });
+    } else {
         message.react(reactionIds[Math.floor(Math.random() * reactionIds.length)])
     }
   }
