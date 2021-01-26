@@ -64,10 +64,11 @@ export const tags = {
       'Rendering something in a window (Animated Sprite for example)',
       'Making a desktop app with GTK or QT',
       'Make a JSON editor GUI',
-      'Create a pokedev with the Pokemon API',
+      'Create a Pokedex with the Pokemon API',
       'Headless CMS',
       'Build an Interpreter',
       'Weather App',
+      'Tetris',
     ].map(idea => '- ' + idea).join('\n'),
   },
   jobs: {
