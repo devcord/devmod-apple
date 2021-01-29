@@ -25,7 +25,7 @@ export default ({
   // meme reactions
   // mwr 214807903129960448
   // cheesecake 164810576508354561
-  if (message.author.id === '164810576508354561' && Math.random() < 0.15) {
+  if (message.author.id === '214807903129960448' && Math.random() < 0.15) {
     const reactionIds = ['788714191669821470', '609008767446548480', '739206458721435720', '803160041221259264', '751029481677914122', '751029481677914122']
     message.react(reactionIds[Math.floor(Math.random() * reactionIds.length)])
   }
