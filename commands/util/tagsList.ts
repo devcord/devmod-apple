@@ -38,7 +38,7 @@ export const tags = {
     description: 'Instead of asking to ask, ask your question instead.' +
       ' People can help you better if they know your question.\n\n' +
       '[How do I ask a good question?](https://stackoverflow.com/help/how-to-ask)\n' +
-      '[Don\'t ask to ask, just ask](https://sol.gfxile.net/dontask.html)',
+      '[Don\'t ask to ask, just ask](https://dontasktoask.com)',
   },
   loweffort: {
     title: 'Low effort',
