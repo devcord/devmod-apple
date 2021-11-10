@@ -19,8 +19,8 @@ const anime: Command = {
 
     const date = new Date().toLocaleString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
 
-    const channel = await client.channels.fetch(message.channel.id)
-    const channelName = '#' + (channel as TextChannel).name.replace(/[^a-zA-Z0-9\-]/g, '')
+    const channel = await message.guild.channels.resolve(message.channel.id) as TextChannel
+    const channelName = channel.name.replace(/[^a-zA-Z0-9\-]/g, '')
 
     const snowflake = userId.replace(/<@!?([0-9]+)>/, '$1')
     const issuedTo = await client.users.fetch(snowflake)
@@ -38,7 +38,7 @@ const anime: Command = {
 
         canvasCtx.drawImage(image, 0, 0, 1088, 631)
         canvasCtx.fillText(date, 130, 430);
-        canvasCtx.fillText(channelName, 150, 470);
+        canvasCtx.fillText(`#${channelName}`, 150, 470);
         canvasCtx.fillText(issuedTo.username, 230, 515);
         canvasCtx.fillText(issuedBy.username, 230, 560);
         canvasCtx.fillText(penalty, 190, 600);
@@ -47,6 +47,7 @@ const anime: Command = {
 
         await message.channel.send(attachment)
     } catch (error) {
+      message.react('❌')
       console.log(error)
     }
   },
