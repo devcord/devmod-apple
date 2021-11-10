@@ -27,7 +27,7 @@ const anime: Command = {
 
     const issuedBy = message.author;
 
-    const penalty = restArgs.join(' ').replace(/[^a-zA-Z0-9]/g, '');
+    const penalty = restArgs.join(' ').replace(/[^a-zA-Z0-9 ]/g, '');
 
     const canvas = createCanvas(1088, 631)
     const canvasCtx = canvas.getContext('2d');
