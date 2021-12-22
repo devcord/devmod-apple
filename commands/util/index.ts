@@ -7,6 +7,7 @@ import LMGTFY from './lmgtfy'
 import MDN from './mdn'
 import HelpPing from './helpPing'
 import Pingable from './pingable'
+import Anime from './anime'
 
 export default [
   Ping,
@@ -18,4 +19,5 @@ export default [
   MDN,
   HelpPing,
   Pingable,
+  Anime,
 ]
