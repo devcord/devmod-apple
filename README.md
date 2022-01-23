@@ -1,6 +1,6 @@
 # devmod-apple
 ## prerequisites
-- node.js 12+
+- node.js 16.6.0+
 
 ## installation
 ```
