@@ -8,6 +8,7 @@ export interface Config {
     reports?: string
 
     help?: string[]
+    helpThreads?: string[]
   }
 
   roles?: {
