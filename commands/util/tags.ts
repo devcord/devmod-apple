@@ -8,6 +8,7 @@ const tagDescription = Object.entries(tags)
       ? `\`${key}\` - ${props['title']}`
       : `\`${key}\``
   })
+  .sort()
   .join('\n')
 
 const tagList = Object.keys(tags)
